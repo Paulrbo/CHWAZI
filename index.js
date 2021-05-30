@@ -2,8 +2,6 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
-var inGame = false;
-
 client.once('ready', () => {
     console.log('Ready !')
     client.user.setActivity("!chwazi element1 element2 element3");
@@ -35,5 +33,4 @@ client.on('message', (message) => {
       }
         random(0, tailleArray);
 });
-
 client.login(process.env.TOKEN);
