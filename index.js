@@ -1,4 +1,16 @@
 const Discord = require('discord.js');
+  fs = require("fs"),
+  path = require("path");
+
+let images = [];
+
+const directoryPath = path.join(__dirname, "cat");
+fs.readdir(directoryPath, function (err, files) {
+  if (err) {
+    return console.log("Unable to scan directory: " + err);
+  }
+  images = files;
+});
 
 const client = new Discord.Client();
 
@@ -8,15 +20,21 @@ client.once('ready', () => {
 });
 
 client.on('message', (message) => {
+    
+    function random(min, max) {
+    return (randnum = Math.floor(Math.random() * (max - min + 1)) + min);
+  }
+
+  if (message.content === "!motivation") {
+    const path = `cat/${images[random(0, images.length)]}`;
+    message.reply("", {
+      files: [path],
+    });
+  }
+    
     var myArray = [''];
     var tailleArray;
-    
-    //console.log(tailleArray);
-    
-    /*if (message.content.startsWith("!chwazi ")){
-        var tailleArray = myArray.push();
-        myNewArray = myData.split(' '); 
-    }*/
+
     
     if (message.content.split(" ")[0] === `!chwazi`) {
         myArray = message.content.split(" ");
