@@ -9,7 +9,7 @@ client.once('ready', () => {
 
 client.on('message', (message) => {
     var myArray = [''];
-    var tailleNewArray;
+    var tailleArray;
     
     //console.log(tailleArray);
     
