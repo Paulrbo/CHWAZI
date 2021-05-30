@@ -27,7 +27,7 @@ client.on('message', (message) => {
 
   if (message.content === "!motivation") {
     const path = `cat/${images[randompic(0, images.length)]}`;
-    message.reply("", {
+    message.reply("tiens, un poti chat de motivation :", {
       files: [path],
     });
   }
