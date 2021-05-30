@@ -21,12 +21,12 @@ client.once('ready', () => {
 
 client.on('message', (message) => {
     
-    function random(min, max) {
-    return (randnum = Math.floor(Math.random() * (max - min + 1)) + min);
+    function randompic(min, max) {
+    return (randnumpic = Math.floor(Math.random() * (max - min + 1)) + min);
   }
 
   if (message.content === "!motivation") {
-    const path = `cat/${images[random(0, images.length)]}`;
+    const path = `cat/${images[randompic(0, images.length)]}`;
     message.reply("", {
       files: [path],
     });
