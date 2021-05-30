@@ -18,7 +18,7 @@ client.on('message', (message) => {
         myNewArray = myData.split(' '); 
     }*/
     
-    if (message.content.split(" ")[0] === `!chwazi`) {
+    if (message.content.split(" ")[0] === `c`) {
         myArray = message.content.split(" ");
         tailleArray = myArray.push(myArray);
         myArray.splice(0, 1);
