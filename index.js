@@ -25,7 +25,7 @@ client.on('message', (message) => {
     return (randnumpic = Math.floor(Math.random() * (max - min + 1)) + min);
   }
 
-  if (message.content === "!motivation") {
+  if (message.content.startsWith("!motivation")) {
     const path = `cat/${images[randompic(0, images.length)]}`;
     message.reply("tiens, un poti chat de motivation :", {
       files: [path],
@@ -36,7 +36,7 @@ client.on('message', (message) => {
     var tailleArray;
 
     
-    if (message.content.split(" ")[0] === `!chwazi`) {
+    if (message.content.split(" ")[0] === "!chwazi") {
         myArray = message.content.split(" ");
         tailleArray = myArray.push(myArray);
         myArray.splice(0, 1);
