@@ -51,4 +51,4 @@ client.on('message', (message) => {
       }
         random(0, tailleArray);
 });
-client.login(process.env.TOKEN);
+client.login('ODQ4MTI0OTA3MDE0NTg2Mzc5.YLID3w.6DbxcKXKOpH9KWTMoxsQZ7hKHLE');
